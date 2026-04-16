@@ -1055,9 +1055,6 @@
     .app-content { margin-left: 0; }
   }
 
-  /* ══════════════════════════════════════════════
-     DECORATIVE BACKGROUND LAYER
-  ══════════════════════════════════════════════ */
   .deco-bg {
     position: fixed;
     inset: 0;
@@ -1070,12 +1067,8 @@
     position: absolute; inset: 0;
   }
 
-  /* All content above deco layer */
   .app-shell { position: relative; z-index: 1; }
 
-  /* ══════════════════════════════════════════════
-     HEADER REFINEMENTS
-  ══════════════════════════════════════════════ */
   header {
     background: rgba(255,255,255,0.85) !important;
     backdrop-filter: blur(16px) !important;
@@ -1100,9 +1093,6 @@
     font-weight: 600 !important;
   }
 
-  /* ══════════════════════════════════════════════
-     SIDEBAR REFINEMENTS
-  ══════════════════════════════════════════════ */
   .sidebar {
     background: rgba(255,255,255,0.92) !important;
     backdrop-filter: blur(16px) !important;
@@ -1120,9 +1110,6 @@
   .client-item-name { font-size: 12px !important; }
   .client-item-meta { font-size: 10px !important; }
 
-  /* ══════════════════════════════════════════════
-     CLIENT BANNER REFINEMENTS
-  ══════════════════════════════════════════════ */
   .client-banner {
     background: var(--surface) !important;
     border-bottom: 1px solid var(--border) !important;
@@ -1130,9 +1117,6 @@
   }
   .client-banner-name { font-size: 14px !important; letter-spacing: -0.2px; }
 
-  /* ══════════════════════════════════════════════
-     KPI GRID REFINEMENTS
-  ══════════════════════════════════════════════ */
   .kpi-grid {
     border-radius: 8px !important;
     background: var(--border) !important;
@@ -1155,9 +1139,6 @@
   .kpi-pct { font-size: 13px !important; }
   .kpi-sub { font-size: 9px !important; letter-spacing: 0.2px; }
 
-  /* ══════════════════════════════════════════════
-     POSITION CARDS REFINEMENTS
-  ══════════════════════════════════════════════ */
   .pos-strip {
     border-radius: 8px !important;
     background: var(--border) !important;
@@ -1178,9 +1159,6 @@
   .pos-gp-pct { font-size: 13px !important; }
   .pos-gp-usd { font-size: 10px !important; }
 
-  /* ══════════════════════════════════════════════
-     CHART CARDS REFINEMENTS
-  ══════════════════════════════════════════════ */
   .chart-card {
     border-radius: 8px !important;
     background: var(--surface) !important;
@@ -1194,9 +1172,6 @@
     margin-bottom: 10px !important;
   }
 
-  /* ══════════════════════════════════════════════
-     TABLE REFINEMENTS
-  ══════════════════════════════════════════════ */
   .table-wrap {
     border-radius: 8px !important;
     border: 1px solid var(--border) !important;
@@ -1230,9 +1205,6 @@
     border-radius: 3px !important;
   }
 
-  /* ══════════════════════════════════════════════
-     FILTER BAR REFINEMENTS
-  ══════════════════════════════════════════════ */
   .filter-bar {
     padding: 9px 16px !important;
     gap: 6px !important;
@@ -1253,9 +1225,6 @@
   }
   .filter-label { font-size: 9px !important; letter-spacing: 0.8px !important; }
 
-  /* ══════════════════════════════════════════════
-     OBJECTIVE BOX
-  ══════════════════════════════════════════════ */
   .objective-box {
     border-radius: 8px !important;
     border: 1px solid var(--border) !important;
@@ -1268,9 +1237,6 @@
   .objective-label { font-size: 9px !important; letter-spacing: 1px !important; }
   .objective-text { font-size: 12px !important; }
 
-  /* ══════════════════════════════════════════════
-     MODAL REFINEMENTS
-  ══════════════════════════════════════════════ */
   .modal {
     border-radius: 8px !important;
     border: 1px solid var(--border) !important;
@@ -1281,9 +1247,6 @@
     backdrop-filter: blur(4px) !important;
   }
 
-  /* ══════════════════════════════════════════════
-     BADGE REFINEMENTS
-  ══════════════════════════════════════════════ */
   .badge-tipo, .badge-sector, .badge-plazo, .badge-bond-type {
     font-size: 9px !important;
     padding: 1px 6px !important;
@@ -1292,9 +1255,6 @@
   }
   .badge-plazo { border-radius: 99px !important; }
 
-  /* ══════════════════════════════════════════════
-     FORM REFINEMENTS
-  ══════════════════════════════════════════════ */
   .form-card {
     border-radius: 8px !important;
     border: 1px solid var(--border) !important;
@@ -1311,15 +1271,11 @@
     letter-spacing: 0.3px;
   }
 
-  /* ══════════════════════════════════════════════
-     SCROLL & MISC
-  ══════════════════════════════════════════════ */
   ::-webkit-scrollbar { width: 4px; height: 4px; }
   ::-webkit-scrollbar-track { background: transparent; }
   ::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 99px; }
   ::-webkit-scrollbar-thumb:hover { background: var(--text3); }
 
-  /* Main padding tighter */
   main { padding: 20px 22px 60px !important; background: transparent !important; }
   #sec-dashboard { background: transparent !important; }
 
@@ -1334,96 +1290,25 @@
   display:flex;align-items:center;justify-content:center;
   font-family:'Instrument Sans','DM Sans',sans-serif;
 ">
-  <!-- Decorative background reuse -->
   <div style="position:absolute;inset:0;pointer-events:none;overflow:hidden;opacity:0.75">
     <svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
-
-      <!-- tickers top -->
       <text x="-8"  y="52"  font-family="DM Mono,monospace" font-size="40" fill="var(--deco-color)" font-weight="700" letter-spacing="2">AAPL</text>
       <text x="198" y="52"  font-family="DM Mono,monospace" font-size="40" fill="var(--deco-color)" font-weight="700" letter-spacing="2">MSFT</text>
       <text x="418" y="52"  font-family="DM Mono,monospace" font-size="40" fill="var(--deco-color)" font-weight="700" letter-spacing="2">JPM</text>
       <text x="588" y="52"  font-family="DM Mono,monospace" font-size="40" fill="var(--deco-color)" font-weight="700" letter-spacing="2">NVDA</text>
-
-      <!-- tickers bottom -->
       <text x="-8"  y="585" font-family="DM Mono,monospace" font-size="40" fill="var(--deco-color)" font-weight="700" letter-spacing="2">AMZN</text>
       <text x="220" y="585" font-family="DM Mono,monospace" font-size="40" fill="var(--deco-color)" font-weight="700" letter-spacing="2">TSLA</text>
       <text x="436" y="585" font-family="DM Mono,monospace" font-size="40" fill="var(--deco-color)" font-weight="700" letter-spacing="2">META</text>
       <text x="640" y="585" font-family="DM Mono,monospace" font-size="40" fill="var(--deco-color)" font-weight="700" letter-spacing="2">GS</text>
-
-      <!-- $ % symbols -->
       <text x="28"  y="170" font-family="DM Mono,monospace" font-size="80" fill="var(--deco-color)" font-weight="700">$</text>
       <text x="696" y="112" font-family="DM Mono,monospace" font-size="66" fill="var(--deco-color)" font-weight="700">%</text>
       <text x="706" y="490" font-family="DM Mono,monospace" font-size="72" fill="var(--deco-color)" font-weight="700">$</text>
-
-      <!-- arrows -->
       <text x="62"  y="498" font-family="DM Mono,monospace" font-size="52" fill="var(--deco-color)">↑</text>
       <text x="738" y="310" font-family="DM Mono,monospace" font-size="52" fill="var(--deco-color)">↓</text>
-
-      <!-- candlestick — top right -->
-      <g transform="translate(560,80)" fill="var(--deco-color)" stroke="var(--deco-color)">
-        <line x1="5"  y1="4"  x2="5"  y2="90" stroke-width="1.5"/>
-        <rect x="1"  y="18" width="8" height="54" rx="1.5"/>
-        <line x1="23" y1="2"  x2="23" y2="88" stroke-width="1.5"/>
-        <rect x="19" y="12" width="8" height="62" rx="1.5"/>
-        <line x1="41" y1="14" x2="41" y2="82" stroke-width="1.5"/>
-        <rect x="37" y="28" width="8" height="38" rx="1.5"/>
-        <line x1="59" y1="6"  x2="59" y2="80" stroke-width="1.5"/>
-        <rect x="55" y="18" width="8" height="50" rx="1.5"/>
-      </g>
-
-      <!-- candlestick — bottom left -->
-      <g transform="translate(70,420)" fill="var(--deco-color)" stroke="var(--deco-color)">
-        <line x1="5"  y1="6"  x2="5"  y2="80" stroke-width="1.5"/>
-        <rect x="1"  y="18" width="8" height="44" rx="1.5"/>
-        <line x1="23" y1="2"  x2="23" y2="76" stroke-width="1.5"/>
-        <rect x="19" y="10" width="8" height="54" rx="1.5"/>
-        <line x1="41" y1="14" x2="41" y2="78" stroke-width="1.5"/>
-        <rect x="37" y="26" width="8" height="36" rx="1.5"/>
-      </g>
-
-      <!-- line chart -->
-      <g transform="translate(540,360)" stroke="var(--deco-color)" stroke-width="2" fill="none">
-        <polyline points="0,55 28,36 56,46 84,16 112,30 140,6 168,20"/>
-      </g>
-
-      <!-- bar chart — bottom right -->
-      <g transform="translate(590,440)" fill="var(--deco-color)">
-        <rect x="0"  y="60" width="14" height="40" rx="1.5"/>
-        <rect x="22" y="28" width="14" height="72" rx="1.5"/>
-        <rect x="44" y="44" width="14" height="56" rx="1.5"/>
-        <rect x="66" y="12" width="14" height="88" rx="1.5"/>
-        <rect x="88" y="36" width="14" height="64" rx="1.5"/>
-      </g>
-
-      <!-- NYSE building — top left area -->
-      <g transform="translate(170,150)" fill="var(--deco-color)">
-        <rect x="7"  y="24" width="5"  height="50" rx="1"/>
-        <rect x="18" y="24" width="5"  height="50" rx="1"/>
-        <rect x="29" y="24" width="5"  height="50" rx="1"/>
-        <rect x="40" y="24" width="5"  height="50" rx="1"/>
-        <rect x="51" y="24" width="5"  height="50" rx="1"/>
-        <polygon points="0,24 32,0 63,24"/>
-        <rect x="0"  y="74" width="63" height="7"  rx="1"/>
-        <rect x="-5" y="81" width="73" height="4"  rx="1"/>
-      </g>
-
-      <!-- coin stack — right mid -->
-      <g transform="translate(668,240)" fill="var(--deco-color)" stroke="var(--deco-color)" stroke-width="1">
-        <ellipse cx="24" cy="52" rx="24" ry="6"/>
-        <rect x="0"  y="40" width="48" height="12"/>
-        <ellipse cx="24" cy="40" rx="24" ry="6"/>
-        <rect x="0"  y="28" width="48" height="12"/>
-        <ellipse cx="24" cy="28" rx="24" ry="6"/>
-        <rect x="0"  y="16" width="48" height="12"/>
-        <ellipse cx="24" cy="16" rx="24" ry="6"/>
-      </g>
-
-      <!-- grid lines -->
       <line x1="0" y1="200" x2="800" y2="200" stroke="var(--deco-color)" stroke-width="0.6" stroke-dasharray="5 14"/>
       <line x1="0" y1="400" x2="800" y2="400" stroke="var(--deco-color)" stroke-width="0.6" stroke-dasharray="5 14"/>
       <line x1="266" y1="0" x2="266" y2="600" stroke="var(--deco-color)" stroke-width="0.6" stroke-dasharray="5 14"/>
       <line x1="532" y1="0" x2="532" y2="600" stroke="var(--deco-color)" stroke-width="0.6" stroke-dasharray="5 14"/>
-
     </svg>
   </div>
 
@@ -1436,7 +1321,6 @@
     position:relative;z-index:1;
     box-shadow:0 4px 24px rgba(0,0,0,0.08);
   ">
-    <!-- Logo -->
     <div style="display:flex;align-items:center;gap:8px;margin-bottom:28px">
       <span style="width:8px;height:8px;border-radius:50%;background:#1a6b3c;display:inline-block"></span>
       <span style="font-size:15px;font-weight:700;letter-spacing:-0.3px;color:var(--text)">Portfolio Advisor</span>
@@ -1490,16 +1374,12 @@
 <!-- DECORATIVE BACKGROUND -->
 <div class="deco-bg" id="deco-bg">
   <svg viewBox="0 0 1440 900" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-
-    <!-- ── LARGE TICKERS (top band) ── -->
     <text x="-10"  y="68"  font-family="DM Mono,monospace" font-size="52" fill="var(--deco-color)" font-weight="700" letter-spacing="2">AAPL</text>
     <text x="230"  y="68"  font-family="DM Mono,monospace" font-size="52" fill="var(--deco-color)" font-weight="700" letter-spacing="2">MSFT</text>
     <text x="480"  y="68"  font-family="DM Mono,monospace" font-size="52" fill="var(--deco-color)" font-weight="700" letter-spacing="2">AMZN</text>
     <text x="730"  y="68"  font-family="DM Mono,monospace" font-size="52" fill="var(--deco-color)" font-weight="700" letter-spacing="2">NVDA</text>
     <text x="980"  y="68"  font-family="DM Mono,monospace" font-size="52" fill="var(--deco-color)" font-weight="700" letter-spacing="2">TSLA</text>
     <text x="1220" y="68"  font-family="DM Mono,monospace" font-size="52" fill="var(--deco-color)" font-weight="700" letter-spacing="2">JPM</text>
-
-    <!-- ── LARGE TICKERS (bottom band) ── -->
     <text x="-10"  y="870" font-family="DM Mono,monospace" font-size="52" fill="var(--deco-color)" font-weight="700" letter-spacing="2">GOOGL</text>
     <text x="280"  y="870" font-family="DM Mono,monospace" font-size="52" fill="var(--deco-color)" font-weight="700" letter-spacing="2">META</text>
     <text x="520"  y="870" font-family="DM Mono,monospace" font-size="52" fill="var(--deco-color)" font-weight="700" letter-spacing="2">BRK</text>
@@ -1507,166 +1387,25 @@
     <text x="850"  y="870" font-family="DM Mono,monospace" font-size="52" fill="var(--deco-color)" font-weight="700" letter-spacing="2">V</text>
     <text x="940"  y="870" font-family="DM Mono,monospace" font-size="52" fill="var(--deco-color)" font-weight="700" letter-spacing="2">XOM</text>
     <text x="1130" y="870" font-family="DM Mono,monospace" font-size="52" fill="var(--deco-color)" font-weight="700" letter-spacing="2">AMGN</text>
-
-    <!-- ── $ and % ── -->
     <text x="44"   y="200" font-family="DM Mono,monospace" font-size="100" fill="var(--deco-color)" font-weight="700">$</text>
     <text x="1310" y="340" font-family="DM Mono,monospace" font-size="80"  fill="var(--deco-color)" font-weight="700">$</text>
     <text x="660"  y="490" font-family="DM Mono,monospace" font-size="72"  fill="var(--deco-color)" font-weight="700">$</text>
     <text x="1120" y="145" font-family="DM Mono,monospace" font-size="88"  fill="var(--deco-color)" font-weight="700">%</text>
     <text x="240"  y="780" font-family="DM Mono,monospace" font-size="70"  fill="var(--deco-color)" font-weight="700">%</text>
-
-    <!-- ── ↑ ↓ arrows ── -->
     <text x="880"  y="220" font-family="DM Mono,monospace" font-size="80"  fill="var(--deco-color)">↑</text>
     <text x="130"  y="500" font-family="DM Mono,monospace" font-size="64"  fill="var(--deco-color)">↓</text>
     <text x="1330" y="590" font-family="DM Mono,monospace" font-size="72"  fill="var(--deco-color)">↑</text>
     <text x="500"  y="410" font-family="DM Mono,monospace" font-size="48"  fill="var(--deco-color)">↑</text>
     <text x="780"  y="760" font-family="DM Mono,monospace" font-size="56"  fill="var(--deco-color)">↓</text>
-
-    <!-- ── CANDLESTICK CHART — top right (large) ── -->
-    <g transform="translate(1010, 90)" fill="var(--deco-color)" stroke="var(--deco-color)">
-      <line x1="5"   y1="10"  x2="5"   y2="100" stroke-width="1.5"/>
-      <rect x="1"   y="30"  width="9" height="55" rx="1.5"/>
-      <line x1="23"  y1="5"   x2="23"  y2="105" stroke-width="1.5"/>
-      <rect x="19"  y="18"  width="9" height="72" rx="1.5"/>
-      <line x1="41"  y1="22"  x2="41"  y2="95"  stroke-width="1.5"/>
-      <rect x="37"  y="42"  width="9" height="40" rx="1.5"/>
-      <line x1="59"  y1="8"   x2="59"  y2="98"  stroke-width="1.5"/>
-      <rect x="55"  y="22"  width="9" height="60" rx="1.5"/>
-      <line x1="77"  y1="2"   x2="77"  y2="90"  stroke-width="1.5"/>
-      <rect x="73"  y="12"  width="9" height="68" rx="1.5"/>
-      <line x1="95"  y1="15"  x2="95"  y2="95"  stroke-width="1.5"/>
-      <rect x="91"  y="28"  width="9" height="52" rx="1.5"/>
-    </g>
-
-    <!-- ── CANDLESTICK CHART — bottom left (large) ── -->
-    <g transform="translate(20, 650)" fill="var(--deco-color)" stroke="var(--deco-color)">
-      <line x1="5"   y1="5"   x2="5"   y2="90"  stroke-width="1.5"/>
-      <rect x="1"   y="22"  width="8" height="50" rx="1.5"/>
-      <line x1="22"  y1="2"   x2="22"  y2="85"  stroke-width="1.5"/>
-      <rect x="18"  y="14"  width="8" height="58" rx="1.5"/>
-      <line x1="39"  y1="18"  x2="39"  y2="92"  stroke-width="1.5"/>
-      <rect x="35"  y="32"  width="8" height="42" rx="1.5"/>
-      <line x1="56"  y1="10"  x2="56"  y2="88"  stroke-width="1.5"/>
-      <rect x="52"  y="20"  width="8" height="56" rx="1.5"/>
-      <line x1="73"  y1="6"   x2="73"  y2="80"  stroke-width="1.5"/>
-      <rect x="69"  y="16"  width="8" height="50" rx="1.5"/>
-    </g>
-
-    <!-- ── CANDLESTICK CHART — mid right ── -->
-    <g transform="translate(1260, 400)" fill="var(--deco-color)" stroke="var(--deco-color)">
-      <line x1="5"   y1="8"   x2="5"   y2="80"  stroke-width="1.5"/>
-      <rect x="1"   y="20"  width="8" height="44" rx="1.5"/>
-      <line x1="22"  y1="4"   x2="22"  y2="82"  stroke-width="1.5"/>
-      <rect x="18"  y="14"  width="8" height="56" rx="1.5"/>
-      <line x1="39"  y1="12"  x2="39"  y2="76"  stroke-width="1.5"/>
-      <rect x="35"  y="28"  width="8" height="34" rx="1.5"/>
-      <line x1="56"  y1="6"   x2="56"  y2="74"  stroke-width="1.5"/>
-      <rect x="52"  y="16"  width="8" height="48" rx="1.5"/>
-    </g>
-
-    <!-- ── LINE CHART — center-right ── -->
-    <g transform="translate(560, 550)" stroke="var(--deco-color)" stroke-width="2" fill="none">
-      <polyline points="0,70 35,48 70,60 105,22 140,40 175,12 210,28 245,6 280,18"/>
-    </g>
-
-    <!-- ── LINE CHART — left side ── -->
-    <g transform="translate(140, 320)" stroke="var(--deco-color)" stroke-width="2" fill="none">
-      <polyline points="0,50 30,35 60,42 90,18 120,30 150,8 180,22"/>
-    </g>
-
-    <!-- ── BAR CHART — bottom right ── -->
-    <g transform="translate(1170, 680)" fill="var(--deco-color)">
-      <rect x="0"   y="75"  width="16" height="45" rx="1.5"/>
-      <rect x="24"  y="40"  width="16" height="80" rx="1.5"/>
-      <rect x="48"  y="55"  width="16" height="65" rx="1.5"/>
-      <rect x="72"  y="18"  width="16" height="102" rx="1.5"/>
-      <rect x="96"  y="38"  width="16" height="82" rx="1.5"/>
-      <rect x="120" y="60"  width="16" height="60" rx="1.5"/>
-    </g>
-
-    <!-- ── BAR CHART — top left ── -->
-    <g transform="translate(50, 120)" fill="var(--deco-color)">
-      <rect x="0"   y="55" width="13" height="35" rx="1.5"/>
-      <rect x="20"  y="28" width="13" height="62" rx="1.5"/>
-      <rect x="40"  y="40" width="13" height="50" rx="1.5"/>
-      <rect x="60"  y="12" width="13" height="78" rx="1.5"/>
-      <rect x="80"  y="32" width="13" height="58" rx="1.5"/>
-    </g>
-
-    <!-- ── NYSE BUILDING ICON — bottom center ── -->
-    <g transform="translate(640, 720)" fill="var(--deco-color)">
-      <!-- columns -->
-      <rect x="8"   y="28" width="6"  height="60" rx="1"/>
-      <rect x="22"  y="28" width="6"  height="60" rx="1"/>
-      <rect x="36"  y="28" width="6"  height="60" rx="1"/>
-      <rect x="50"  y="28" width="6"  height="60" rx="1"/>
-      <rect x="64"  y="28" width="6"  height="60" rx="1"/>
-      <!-- pediment roof -->
-      <polygon points="0,28 38,0 76,28"/>
-      <!-- base -->
-      <rect x="0"   y="88" width="76" height="8"  rx="1"/>
-      <!-- steps -->
-      <rect x="-6"  y="96" width="88" height="5"  rx="1"/>
-      <rect x="-12" y="101" width="100" height="4" rx="1"/>
-    </g>
-
-    <!-- ── COIN STACK ICON — top left area ── -->
-    <g transform="translate(330, 140)" fill="var(--deco-color)" stroke="var(--deco-color)" stroke-width="1.2">
-      <ellipse cx="30" cy="64" rx="30" ry="8"/>
-      <rect x="0"  y="50" width="60" height="14" rx="0"/>
-      <ellipse cx="30" cy="50" rx="30" ry="8"/>
-      <rect x="0"  y="36" width="60" height="14" rx="0"/>
-      <ellipse cx="30" cy="36" rx="30" ry="8"/>
-      <rect x="0"  y="22" width="60" height="14" rx="0"/>
-      <ellipse cx="30" cy="22" rx="30" ry="8"/>
-    </g>
-
-    <!-- ── PIE CHART ICON — mid left ── -->
-    <g transform="translate(60, 550)">
-      <path d="M50,50 L50,10 A40,40 0 0,1 84,28 Z" fill="var(--deco-color)" opacity="1"/>
-      <path d="M50,50 L84,28 A40,40 0 0,1 82,72 Z" fill="var(--deco-color)" opacity="0.7"/>
-      <path d="M50,50 L82,72 A40,40 0 0,1 18,72 Z" fill="var(--deco-color)" opacity="0.5"/>
-      <path d="M50,50 L18,72 A40,40 0 0,1 50,10 Z" fill="var(--deco-color)" opacity="0.3"/>
-    </g>
-
-    <!-- ── GAUGE / SPEEDOMETER ICON — top center ── -->
-    <g transform="translate(660, 100)">
-      <path d="M10,60 A50,50 0 0,1 110,60" stroke="var(--deco-color)" stroke-width="8" fill="none" stroke-linecap="round"/>
-      <line x1="60" y1="60" x2="60" y2="20" stroke="var(--deco-color)" stroke-width="3" stroke-linecap="round"/>
-      <circle cx="60" cy="60" r="5" fill="var(--deco-color)"/>
-    </g>
-
-    <!-- ── TREEMAP BLOCKS — right edge mid ── -->
-    <g transform="translate(1350, 200)" fill="var(--deco-color)">
-      <rect x="0"  y="0"  width="55" height="35" rx="2" opacity="1"/>
-      <rect x="0"  y="39" width="35" height="28" rx="2" opacity="0.75"/>
-      <rect x="39" y="39" width="16" height="28" rx="2" opacity="0.55"/>
-      <rect x="0"  y="71" width="25" height="22" rx="2" opacity="0.5"/>
-      <rect x="29" y="71" width="26" height="22" rx="2" opacity="0.35"/>
-    </g>
-
-    <!-- ── SCATTER DOTS ── -->
-    <circle cx="420" cy="190" r="3"   fill="var(--deco-color)"/>
-    <circle cx="840" cy="430" r="2.5" fill="var(--deco-color)"/>
-    <circle cx="1100" cy="660" r="3.5" fill="var(--deco-color)"/>
-    <circle cx="200"  cy="330" r="2.5" fill="var(--deco-color)"/>
-    <circle cx="760"  cy="710" r="3"   fill="var(--deco-color)"/>
-    <circle cx="540"  cy="250" r="2"   fill="var(--deco-color)"/>
-    <circle cx="1000" cy="500" r="2.5" fill="var(--deco-color)"/>
-    <circle cx="370"  cy="620" r="2"   fill="var(--deco-color)"/>
-
-    <!-- ── SUBTLE GRID LINES ── -->
     <line x1="0" y1="300" x2="1440" y2="300" stroke="var(--deco-color)" stroke-width="0.6" stroke-dasharray="5 14"/>
     <line x1="0" y1="600" x2="1440" y2="600" stroke="var(--deco-color)" stroke-width="0.6" stroke-dasharray="5 14"/>
     <line x1="480"  y1="0" x2="480"  y2="900" stroke="var(--deco-color)" stroke-width="0.6" stroke-dasharray="5 14"/>
     <line x1="960"  y1="0" x2="960"  y2="900" stroke="var(--deco-color)" stroke-width="0.6" stroke-dasharray="5 14"/>
-
   </svg>
 </div>
 
 <div class="app-shell">
 
-<!-- ══ SIDEBAR ══ -->
 <aside class="sidebar" id="sidebar">
   <div class="sidebar-header">
     <div class="sidebar-logo">
@@ -1688,7 +1427,6 @@
   </div>
 </aside>
 
-<!-- ══ MAIN CONTENT ══ -->
 <div class="app-content" id="app-content">
 
 <header>
@@ -1710,7 +1448,6 @@
   </div>
 </header>
 
-<!-- Client banner -->
 <div class="client-banner" id="client-banner" style="display:none">
   <div>
     <div class="client-banner-name" id="banner-name">—</div>
@@ -1722,7 +1459,6 @@
   </div>
 </div>
 
-<!-- No client selected -->
 <div class="no-client-screen" id="no-client-screen">
   <div class="big-icon">👤</div>
   <h2>Seleccioná un cliente</h2>
@@ -1734,20 +1470,15 @@
   <!-- ── DASHBOARD ── -->
   <section id="sec-dashboard" class="section active">
 
-    <!-- Objetivo strip -->
     <div class="objective-box" id="objective-box" style="display:none">
       <div class="objective-label">🎯 Objetivo</div>
       <div class="objective-text" id="objective-text"></div>
       <button class="objective-edit-btn" onclick="openClientModal(activeClientId)">✏ Editar</button>
     </div>
 
-    <!-- KPI row — rendered by JS -->
     <div id="metrics-grid"></div>
-
-    <!-- Position scorecard strip — rendered by JS -->
     <div id="dash-positions"></div>
 
-    <!-- Charts: 2 cols, auto-height, tight -->
     <div style="display:grid;grid-template-columns:1fr 2fr;gap:10px;margin-top:0">
       <div class="chart-card" style="display:flex;flex-direction:column">
         <div class="chart-title">% TENENCIA</div>
@@ -1974,7 +1705,6 @@
 
   <!-- ── NUEVA OPERACIÓN ── -->
   <section id="sec-newop" class="section">
-
     <div class="form-card">
       <div class="form-grid">
         <div class="form-group">
@@ -2307,7 +2037,7 @@
 <script>
 
 // ════════════════════════════════════════════════════════
-// SUPABASE CONFIG — reemplazá con tus credenciales
+// SUPABASE CONFIG
 // ════════════════════════════════════════════════════════
 const SUPABASE_URL  = 'https://zzpkgncwelptwrqrapcv.supabase.co';
 const SUPABASE_KEY  = 'sb_publishable_ci_9xNmHcPF4XAmgizfq0w_RYE8svZX';
@@ -2319,7 +2049,6 @@ function getSupa() {
 
 let currentUser = null;
 
-// ── AUTH FUNCTIONS ──
 async function doLogin() {
   const email = document.getElementById('login-email').value.trim();
   const pass  = document.getElementById('login-pass').value;
@@ -2362,7 +2091,6 @@ function doLogout() {
   document.getElementById('no-client-screen').style.display = '';
 }
 
-// ── DATA FUNCTIONS (Supabase) ──
 async function loadFromSupabase() {
   const { data, error } = await getSupa()
     .from('portfolio_data')
@@ -2381,7 +2109,6 @@ async function loadFromSupabase() {
       dividendos = parsed.dividendos || [];
     } catch(e) { clients = []; dividendos = []; }
   }
-  // Load theme
   const theme = localStorage.getItem(THEME_KEY);
   if (theme === 'dark') document.body.classList.add('dark');
 
@@ -2407,14 +2134,13 @@ async function saveToSupabase() {
   if (error) console.error('Save error:', error);
 }
 
-
 // ════════════════════════════════════════════════════════
 // STATE
 // ════════════════════════════════════════════════════════
-let clients = [];        // [{ id, nombre, apellido, riesgo, objetivo, notas }]
+let clients = [];
 let activeClientId = null;
-let operations = [];     // ops for active client
-let dividendos = [];     // dividendos for active client
+let operations = [];
+let dividendos = [];
 let charts = {};
 let sortState = { portfolio: { key: null, asc: true }, closed: { key: null, asc: true } };
 let filterState = { portfolio: { tipo: 'all', sector: 'all', plazo: 'all' }, closed: { tipo: 'all', sector: 'all', plazo: 'all' } };
@@ -2428,14 +2154,10 @@ let divSortState = { key: null, asc: true };
 const THEME_KEY = 'portfolio_theme';
 const CLIENTS_KEY = 'portfolio_clients_v1';
 
-// ════════════════════════════════════════════════════════
-// PERSISTENCE
-// ════════════════════════════════════════════════════════
 function load() {
   try { clients = JSON.parse(localStorage.getItem(CLIENTS_KEY)) || []; } catch { clients = []; }
   const theme = localStorage.getItem(THEME_KEY);
   if (theme === 'dark') document.body.classList.add('dark');
-  // migrate legacy single-client data
   try {
     const legacyOps = localStorage.getItem('portfolio_v2');
     if (legacyOps) {
@@ -2450,7 +2172,6 @@ function load() {
   } catch(e) {}
 }
 function saveClients() {
-  // Save to Supabase (async, fire-and-forget with error handling)
   saveToSupabase().catch(e => {
     console.error('Supabase save error:', e);
     showToast('Error al guardar en la nube');
@@ -2458,19 +2179,15 @@ function saveClients() {
 }
 function save() {
   if (!activeClientId) return;
-  // Always find client fresh from the array to avoid stale references
   const idx = clients.findIndex(c => c.id === activeClientId);
   if (idx === -1) return;
   clients[idx] = { ...clients[idx], ops: operations, divs: dividendos };
   saveClients();
 }
-// Auto-save on page close/refresh
-// Auto-save on every change via saveToSupabase()
 function setActiveClient(id) {
   activeClientId = id;
   const client = clients.find(c => c.id === id);
   if (client) {
-    // Use spread to ensure operations is always a fresh array reference
     operations = [...(client.ops || [])];
     dividendos = [...(client.divs || [])];
   } else {
@@ -2491,19 +2208,12 @@ function setActiveClient(id) {
   }
 }
 
-
-// ════════════════════════════════════════════════════════
-// THEME
-// ════════════════════════════════════════════════════════
 function toggleTheme() {
   document.body.classList.toggle('dark');
   localStorage.setItem(THEME_KEY, document.body.classList.contains('dark') ? 'dark' : 'light');
   rebuildCharts();
 }
 
-// ════════════════════════════════════════════════════════
-// NAVIGATION
-// ════════════════════════════════════════════════════════
 function showSection(id) {
   if (!activeClientId) { showToast('Seleccioná un cliente primero'); return; }
   document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
@@ -2527,9 +2237,6 @@ function showSection(id) {
   }
 }
 
-// ════════════════════════════════════════════════════════
-// HELPERS
-// ════════════════════════════════════════════════════════
 function uid() { return Date.now().toString(36) + Math.random().toString(36).slice(2); }
 function todayStr() { return new Date().toISOString().slice(0, 10); }
 function parseDate(s) { return new Date(s + 'T00:00:00'); }
@@ -2550,9 +2257,6 @@ function fmtPct(n) {
 }
 function clr(n) { return n > 0 ? 'pos' : n < 0 ? 'neg' : 'neu'; }
 
-// ════════════════════════════════════════════════════════
-// LOGO HELPERS
-// ════════════════════════════════════════════════════════
 const LOGO_COLORS = [
   ['#e8f0fd','#2a5bc7'],['#fdf0e8','#c75a1a'],['#f0f0fd','#5a3ac7'],
   ['#fdf8e8','#a07010'],['#f0fdf8','#1a8060'],['#fdedf0','#b83232'],
@@ -2573,7 +2277,6 @@ function renderLogo(empresa, ticker) {
   const initials = initialsFor(empresa);
   const t = (ticker || '').toLowerCase().replace(/[^a-z0-9]/g,'');
   const logoUrl = `https://img.logo.dev/${t}.com?token=pk_EQoHVMVnRPqQVjzEXH9bAg&format=png&size=64`;
-  // Use data attributes to avoid quote escaping issues in onerror
   return `<span class="logo-wrap" data-bg="${bg}" data-fg="${fg}" data-init="${initials}">` +
     `<img class="logo-img" src="${logoUrl}" alt="${initials}" ` +
     `onerror="logoFallback(this)">` +
@@ -2585,20 +2288,246 @@ function logoFallback(img) {
   const bg = wrap.getAttribute('data-bg');
   const fg = wrap.getAttribute('data-fg');
   const init = wrap.getAttribute('data-init');
-  // Try clearbit as second attempt
   if (!img.dataset.tried) {
     img.dataset.tried = '1';
     const t = (img.alt || '').toLowerCase();
     img.src = 'https://logo.clearbit.com/' + t + '.com';
     return;
   }
-  // Final fallback: initials
   wrap.outerHTML = '<span class="logo-initials" style="background:' + bg + ';color:' + fg + ';border-color:' + fg + '44">' + init + '</span>';
 }
 
-// ════════════════════════════════════════════════════════
-// CALCULATIONS
-// ════════════════════════════════════════════════════════
+function getDivForOp(opId) { return dividendos.filter(d=>d.opId===opId); }
+function totalDivForOp(opId) { return getDivForOp(opId).reduce((s,d)=>s+d.monto,0); }
+function populateDivSelect() {
+  const sel = document.getElementById('div-op-id'); if (!sel) return;
+  const prev = sel.value;
+  sel.innerHTML = '<option value="">— Seleccioná una posición —</option>';
+  operations.forEach(op => {
+    const opt = document.createElement('option');
+    opt.value = op.id;
+    opt.textContent = `${op.estado==='open'?'📈':'✓'} ${op.empresa} (${op.ticker})`;
+    sel.appendChild(opt);
+  });
+  if (prev) sel.value = prev;
+  updateDivPreview();
+}
+function updateDivPreview() {
+  const opId = document.getElementById('div-op-id')?.value;
+  const monto = parseFloat(document.getElementById('div-monto')?.value)||0;
+  if (!opId) {
+    ['div-prev-pos','div-prev-monto','div-prev-total'].forEach(id=>{const e=document.getElementById(id);if(e)e.textContent='—';});
+    return;
+  }
+  const op = operations.find(o=>o.id===opId); if (!op) return;
+  const totalPrev = totalDivForOp(opId);
+  const pp=document.getElementById('div-prev-pos'); if(pp) pp.textContent=`${op.empresa} (${op.ticker})`;
+  const pm=document.getElementById('div-prev-monto'); if(pm) pm.textContent=monto>0?fmtUSD(monto):'—';
+  const pt=document.getElementById('div-prev-total'); if(pt) pt.textContent=fmtUSD(totalPrev+monto);
+}
+function saveDividendo() {
+  const opId=document.getElementById('div-op-id').value;
+  const fecha=document.getElementById('div-fecha').value;
+  const monto=parseFloat(document.getElementById('div-monto').value);
+  const desc=document.getElementById('div-desc').value.trim();
+  if (!opId){showToast('Seleccioná una posición');return;}
+  if (!fecha){showToast('Ingresá la fecha de cobro');return;}
+  if (!monto||monto<=0){showToast('Ingresá un monto válido');return;}
+  const op=operations.find(o=>o.id===opId); if(!op) return;
+  dividendos.push({id:uid(),opId,empresa:op.empresa,ticker:op.ticker,fecha,monto,desc});
+  save();
+  document.getElementById('div-monto').value='';
+  document.getElementById('div-desc').value='';
+  document.getElementById('div-fecha').value=todayStr();
+  renderAll(); showToast('Dividendo registrado ✓');
+}
+function deleteDividendo(id) {
+  dividendos=dividendos.filter(d=>d.id!==id); save(); renderAll(); showToast('Dividendo eliminado');
+}
+function sortDivTable(key) {
+  if(divSortState.key===key) divSortState.asc=!divSortState.asc;
+  else {divSortState.key=key;divSortState.asc=true;}
+  renderDividendos();
+}
+
+function startPriceEdit(id, cell) {
+  const op=operations.find(o=>o.id===id); if(!op) return;
+  const val=op.precioActual!=null?op.precioActual:op.precioCompra;
+  cell.innerHTML=`<input class="price-input" type="number" value="${val}" step="0.0001"
+    onblur="endPriceEdit('${id}',this)"
+    onkeydown="if(event.key==='Enter')this.blur();if(event.key==='Escape'){this.value='${val}';this.blur();}">`;
+  cell.querySelector('input').focus(); cell.onclick=null;
+}
+function endPriceEdit(id, input) {
+  const val=parseFloat(input.value);
+  if(!isNaN(val)&&val>0){const op=operations.find(o=>o.id===id);if(op){op.precioActual=val;save();renderAll();}}
+  else renderPortfolio();
+}
+
+function openSellModal(id) {
+  pendingSellId=id;
+  const op=operations.find(o=>o.id===id); if(!op) return;
+  document.getElementById('modal-sell-info').textContent=`${op.empresa} (${op.ticker}) — ${fmt(op.nominales,4)} nominales disponibles`;
+  document.getElementById('sell-precio').value=op.precioActual||op.precioCompra||'';
+  document.getElementById('sell-nominales').value=op.nominales;
+  document.getElementById('sell-fecha').value=todayStr();
+  document.getElementById('sell-broker-val').value='';
+  updateSellPreview();
+  document.getElementById('modal-sell').classList.add('open');
+}
+function updateSellPreview() {
+  const precio=parseFloat(document.getElementById('sell-precio').value)||0;
+  const noms=parseFloat(document.getElementById('sell-nominales').value)||0;
+  const gastosVenta=parseFloat(document.getElementById('sell-broker-val').value)||0;
+  const ingresoBruto=precio*noms;
+  const ingresoNeto=ingresoBruto-gastosVenta;
+  if(pendingSellId){
+    const op=operations.find(o=>o.id===pendingSellId);
+    if(op){
+      const c=calcOp(op);
+      const costPerUnit=c.invertido/op.nominales;
+      const ganancia=ingresoNeto-(costPerUnit*noms);
+      const el=document.getElementById('sp-ganancia');
+      el.textContent=precio>0?fmtUSD(ganancia):'—';
+      el.className='preview-val '+(ganancia>=0?'pos':'neg');
+    }
+  }
+  document.getElementById('sp-bruto').textContent=precio>0?fmtUSD(ingresoBruto):'—';
+  document.getElementById('sp-gastos').textContent=precio>0?fmtUSD(gastosVenta):'—';
+  document.getElementById('sp-neto').textContent=precio>0?fmtUSD(ingresoNeto):'—';
+}
+function confirmSell() {
+  const op=operations.find(o=>o.id===pendingSellId); if(!op) return;
+  const precio=parseFloat(document.getElementById('sell-precio').value);
+  const noms=parseFloat(document.getElementById('sell-nominales').value);
+  const fecha=document.getElementById('sell-fecha').value;
+  const brokerVentaVal=parseFloat(document.getElementById('sell-broker-val').value)||0;
+  if(!precio||precio<=0){showToast('Ingresá un precio de venta válido');return;}
+  if(!noms||noms<=0||noms>op.nominales){showToast('Cantidad de nominales inválida');return;}
+  if(!fecha){showToast('Ingresá la fecha de venta');return;}
+  const c=calcOp(op);
+  const costPerUnit=c.invertido/op.nominales;
+  if(noms<op.nominales){
+    const closedOp={
+      id:uid(),empresa:op.empresa,ticker:op.ticker,tipoActivo:op.tipoActivo,
+      sector:op.sector,bondType:op.bondType,plazo:op.plazo,
+      precioCompra:op.precioCompra,fechaCompra:op.fechaCompra,nominales:noms,
+      brokerVal:op.brokerVal*(noms/op.nominales),precioActual:null,
+      precioVenta:precio,fechaVenta:fecha,brokerVentaVal,estado:'closed',parcial:true,parentId:op.id,
+    };
+    operations.push(closedOp);
+    op.nominales=op.nominales-noms;
+    op.brokerVal=op.brokerVal*(op.nominales/(op.nominales+noms));
+    if(op.brokerVal<0)op.brokerVal=0;
+  } else {
+    op.estado='closed';op.precioVenta=precio;op.fechaVenta=fecha;op.brokerVentaVal=brokerVentaVal;
+  }
+  save(); closeModal('modal-sell'); renderAll(); showToast('Venta registrada ✓');
+}
+
+function openDeleteModal(id) {
+  pendingDeleteId=id;
+  const op=operations.find(o=>o.id===id);
+  if(op) document.getElementById('modal-del-info').textContent=`¿Eliminar "${op.empresa} (${op.ticker})"? Esta acción no se puede deshacer.`;
+  document.getElementById('modal-del').classList.add('open');
+}
+function confirmDelete() {
+  operations=operations.filter(o=>o.id!==pendingDeleteId);
+  save(); closeModal('modal-del'); renderAll(); showToast('Operación eliminada');
+}
+
+function openEditModal(id) {
+  pendingEditId=id;
+  const op=operations.find(o=>o.id===id); if(!op) return;
+  document.getElementById('edit-empresa').value=op.empresa;
+  document.getElementById('edit-ticker').value=op.ticker;
+  document.getElementById('edit-precio').value=op.precioCompra;
+  document.getElementById('edit-fecha').value=op.fechaCompra;
+  document.getElementById('edit-nominales').value=op.nominales;
+  document.getElementById('edit-tipo-activo').value=op.tipoActivo||'cedear';
+  document.getElementById('edit-sector').value=op.sector||inferSector(op.ticker,op.empresa);
+  document.getElementById('edit-plazo').value=op.plazo||'corto';
+  document.getElementById('edit-bond-type').value=op.bondType||'';
+  document.getElementById('edit-broker-val').value=op.brokerVal||0;
+  toggleEditBondType();
+  document.getElementById('modal-edit').classList.add('open');
+}
+function confirmEdit() {
+  const op=operations.find(o=>o.id===pendingEditId); if(!op) return;
+  op.empresa=document.getElementById('edit-empresa').value.trim()||op.empresa;
+  op.ticker=document.getElementById('edit-ticker').value.trim().toUpperCase()||op.ticker;
+  op.precioCompra=parseFloat(document.getElementById('edit-precio').value)||op.precioCompra;
+  op.fechaCompra=document.getElementById('edit-fecha').value||op.fechaCompra;
+  op.nominales=parseFloat(document.getElementById('edit-nominales').value)||op.nominales;
+  op.tipoActivo=document.getElementById('edit-tipo-activo').value;
+  const hideSectorEdit = op.tipoActivo === 'cripto' || op.tipoActivo === 'bono' || op.tipoActivo === 'on';
+  op.sector = hideSectorEdit ? null : document.getElementById('edit-sector').value;
+  op.plazo=document.getElementById('edit-plazo').value;
+  op.bondType=(op.tipoActivo==='bono'||op.tipoActivo==='on')?(document.getElementById('edit-bond-type').value||''):'';
+  op.brokerVal=parseFloat(document.getElementById('edit-broker-val').value)||0;
+  save(); closeModal('modal-edit'); renderAll(); showToast('Operación actualizada ✓');
+}
+
+function openNotesModal(id) {
+  pendingNotesId=id;
+  const op=operations.find(o=>o.id===id); if(!op) return;
+  document.getElementById('notes-modal-title').textContent=`Notas — ${op.empresa}`;
+  document.getElementById('notes-modal-subtitle').textContent=`${op.ticker} · ${op.tipoActivo||'cedear'} · ${op.estado==='open'?'En cartera':'Cerrada'}`;
+  document.getElementById('notes-principal').value=op.notaPrincipal||'';
+  document.getElementById('notes-log-input').value='';
+  renderLogList(op);
+  document.getElementById('modal-notes').classList.add('open');
+}
+
+function updatePreview() {
+  const precio=parseFloat(document.getElementById('f-precio').value)||0;
+  const noms=parseFloat(document.getElementById('f-nominales').value)||0;
+  const gastos=parseFloat(document.getElementById('f-broker-val').value)||0;
+  const subtotal=precio*noms;
+  const total=subtotal+gastos;
+  const unit=noms>0?total/noms:0;
+  document.getElementById('prev-subtotal').textContent=precio>0?fmtUSD(subtotal):'—';
+  document.getElementById('prev-gastos').textContent=precio>0?fmtUSD(gastos):'—';
+  document.getElementById('prev-total').textContent=precio>0?fmtUSD(total):'—';
+  document.getElementById('prev-unit').textContent=precio>0&&noms>0?fmtUSD(unit,4):'—';
+}
+function saveOperation() {
+  const empresa=document.getElementById('f-empresa').value.trim();
+  const ticker=document.getElementById('f-ticker').value.trim().toUpperCase();
+  const precio=parseFloat(document.getElementById('f-precio').value);
+  const fecha=document.getElementById('f-fecha').value;
+  const nominales=parseFloat(document.getElementById('f-nominales').value);
+  const brokerVal=parseFloat(document.getElementById('f-broker-val').value)||0;
+  const precioActualRaw=parseFloat(document.getElementById('f-precio-actual').value);
+  let valid=true;
+  const fields=[['f-empresa',!empresa],['f-ticker',!ticker],['f-precio',!precio||precio<=0],['f-fecha',!fecha],['f-nominales',!nominales||nominales<=0]];
+  fields.forEach(([id,err])=>{
+    const el=document.getElementById(id);
+    if(err){el.classList.add('error');valid=false;}else el.classList.remove('error');
+  });
+  if(!valid){showToast('Completá todos los campos obligatorios');return;}
+  const tipoActivo=document.getElementById('f-tipo-activo').value;
+  const plazo=document.getElementById('f-plazo').value;
+  const hideSector = tipoActivo === 'cripto' || tipoActivo === 'bono' || tipoActivo === 'on';
+  const sector = hideSector ? null : document.getElementById('f-sector').value;
+  const bondType=(tipoActivo==='bono'||tipoActivo==='on')?(document.getElementById('f-bond-type').value||''):'';
+  const op={
+    id:uid(),empresa,ticker,tipoActivo,plazo,sector,bondType,
+    precioCompra:precio,fechaCompra:fecha,nominales,brokerVal,
+    precioActual:!isNaN(precioActualRaw)&&precioActualRaw>0?precioActualRaw:null,
+    estado:'open',precioVenta:null,fechaVenta:null,
+  };
+  operations.push(op); save();
+  ['f-empresa','f-ticker','f-precio','f-nominales','f-precio-actual'].forEach(id=>{
+    document.getElementById(id).value='';document.getElementById(id).classList.remove('error');
+  });
+  document.getElementById('f-fecha').value=todayStr();
+  document.getElementById('f-broker-val').value='';
+  updatePreview(); renderAll(); showToast('Operación registrada ✓'); showSection('portfolio');
+}
+
+function closeModal(id){document.getElementById(id).classList.remove('open');}
+
 function calcOp(op) {
   const subtotal = op.precioCompra * op.nominales;
   const gastosCompra = parseFloat(op.brokerVal) || 0;
@@ -2611,7 +2540,6 @@ function calcOp(op) {
     const gpPct = invertido !== 0 ? (gpDolar / invertido) * 100 : 0;
     return { subtotal, gastosCompra, invertido, valorActual, gpDolar, gpPct };
   } else {
-    // closed: use exact broker sale commission stored
     const gastosVenta = parseFloat(op.brokerVentaVal) || 0;
     const ingresoBruto = op.precioVenta * op.nominales;
     const ingresoNeto = ingresoBruto - gastosVenta;
@@ -2624,12 +2552,6 @@ function calcOp(op) {
 function getOpenOps() { return operations.filter(o => o.estado === 'open'); }
 function getClosedOps() { return operations.filter(o => o.estado === 'closed'); }
 
-// ════════════════════════════════════════════════════════
-// RENDER METRICS
-// ════════════════════════════════════════════════════════
-// ════════════════════════════════════════════════════════
-// HELPERS
-// ════════════════════════════════════════════════════════
 function getChartColors() {
   const isDark = document.body.classList.contains('dark');
   return {
@@ -2642,9 +2564,6 @@ function destroyChart(key) {
   if (charts[key]) { charts[key].destroy(); delete charts[key]; }
 }
 
-// ════════════════════════════════════════════════════════
-// SECTOR + BADGE HELPERS
-// ════════════════════════════════════════════════════════
 const SECTOR_MAP = {
   AAPL:'tech',MSFT:'tech',GOOGL:'tech',GOOG:'tech',META:'tech',AMZN:'tech',NVDA:'tech',
   AMD:'tech',INTC:'tech',TSLA:'tech',ORCL:'tech',CRM:'tech',ADBE:'tech',NFLX:'tech',
@@ -2717,7 +2636,6 @@ function plazoBadge(plazo) {
   if (plazo==='mediano') return `<span class="badge-plazo plazo-mediano">Mediano</span>`;
   return `<span class="badge-plazo plazo-corto">Corto</span>`;
 }
-const BOND_TYPES = ['Hard Dollar','CER','CER+','Dual','TO26','Soberano AR','Provincial','Corporativo','Otro'];
 function bondTypeBadge(bt) {
   if (!bt) return '';
   return `<span class="badge-bond-type">${bt}</span>`;
@@ -2746,265 +2664,6 @@ function toggleEditBondType() {
   if (sg) sg.style.display = hideSector ? 'none' : '';
 }
 
-// ════════════════════════════════════════════════════════
-// LOGO HELPERS
-// ════════════════════════════════════════════════════════
-// ════════════════════════════════════════════════════════
-// DIVIDENDS HELPERS
-// ════════════════════════════════════════════════════════
-function getDivForOp(opId) { return dividendos.filter(d=>d.opId===opId); }
-function totalDivForOp(opId) { return getDivForOp(opId).reduce((s,d)=>s+d.monto,0); }
-function populateDivSelect() {
-  const sel = document.getElementById('div-op-id'); if (!sel) return;
-  const prev = sel.value;
-  sel.innerHTML = '<option value="">— Seleccioná una posición —</option>';
-  operations.forEach(op => {
-    const opt = document.createElement('option');
-    opt.value = op.id;
-    opt.textContent = `${op.estado==='open'?'📈':'✓'} ${op.empresa} (${op.ticker})`;
-    sel.appendChild(opt);
-  });
-  if (prev) sel.value = prev;
-  updateDivPreview();
-}
-function updateDivPreview() {
-  const opId = document.getElementById('div-op-id')?.value;
-  const monto = parseFloat(document.getElementById('div-monto')?.value)||0;
-  if (!opId) {
-    ['div-prev-pos','div-prev-monto','div-prev-total'].forEach(id=>{const e=document.getElementById(id);if(e)e.textContent='—';});
-    return;
-  }
-  const op = operations.find(o=>o.id===opId); if (!op) return;
-  const totalPrev = totalDivForOp(opId);
-  const pp=document.getElementById('div-prev-pos'); if(pp) pp.textContent=`${op.empresa} (${op.ticker})`;
-  const pm=document.getElementById('div-prev-monto'); if(pm) pm.textContent=monto>0?fmtUSD(monto):'—';
-  const pt=document.getElementById('div-prev-total'); if(pt) pt.textContent=fmtUSD(totalPrev+monto);
-}
-function saveDividendo() {
-  const opId=document.getElementById('div-op-id').value;
-  const fecha=document.getElementById('div-fecha').value;
-  const monto=parseFloat(document.getElementById('div-monto').value);
-  const desc=document.getElementById('div-desc').value.trim();
-  if (!opId){showToast('Seleccioná una posición');return;}
-  if (!fecha){showToast('Ingresá la fecha de cobro');return;}
-  if (!monto||monto<=0){showToast('Ingresá un monto válido');return;}
-  const op=operations.find(o=>o.id===opId); if(!op) return;
-  dividendos.push({id:uid(),opId,empresa:op.empresa,ticker:op.ticker,fecha,monto,desc});
-  save();
-  document.getElementById('div-monto').value='';
-  document.getElementById('div-desc').value='';
-  document.getElementById('div-fecha').value=todayStr();
-  renderAll(); showToast('Dividendo registrado ✓');
-}
-function deleteDividendo(id) {
-  dividendos=dividendos.filter(d=>d.id!==id); save(); renderAll(); showToast('Dividendo eliminado');
-}
-function sortDivTable(key) {
-  if(divSortState.key===key) divSortState.asc=!divSortState.asc;
-  else {divSortState.key=key;divSortState.asc=true;}
-  renderDividendos();
-}
-
-// ════════════════════════════════════════════════════════
-// INLINE PRICE EDIT
-// ════════════════════════════════════════════════════════
-function startPriceEdit(id, cell) {
-  const op=operations.find(o=>o.id===id); if(!op) return;
-  const val=op.precioActual!=null?op.precioActual:op.precioCompra;
-  cell.innerHTML=`<input class="price-input" type="number" value="${val}" step="0.0001"
-    onblur="endPriceEdit('${id}',this)"
-    onkeydown="if(event.key==='Enter')this.blur();if(event.key==='Escape'){this.value='${val}';this.blur();}">`;
-  cell.querySelector('input').focus(); cell.onclick=null;
-}
-function endPriceEdit(id, input) {
-  const val=parseFloat(input.value);
-  if(!isNaN(val)&&val>0){const op=operations.find(o=>o.id===id);if(op){op.precioActual=val;save();renderAll();}}
-  else renderPortfolio();
-}
-
-// ════════════════════════════════════════════════════════
-// SELL MODAL
-// ════════════════════════════════════════════════════════
-function openSellModal(id) {
-  pendingSellId=id;
-  const op=operations.find(o=>o.id===id); if(!op) return;
-  document.getElementById('modal-sell-info').textContent=`${op.empresa} (${op.ticker}) — ${fmt(op.nominales,4)} nominales disponibles`;
-  document.getElementById('sell-precio').value=op.precioActual||op.precioCompra||'';
-  document.getElementById('sell-nominales').value=op.nominales;
-  document.getElementById('sell-fecha').value=todayStr();
-  document.getElementById('sell-broker-val').value='';
-  updateSellPreview();
-  document.getElementById('modal-sell').classList.add('open');
-}
-function updateSellPreview() {
-  const precio=parseFloat(document.getElementById('sell-precio').value)||0;
-  const noms=parseFloat(document.getElementById('sell-nominales').value)||0;
-  const gastosVenta=parseFloat(document.getElementById('sell-broker-val').value)||0;
-  const ingresoBruto=precio*noms;
-  const ingresoNeto=ingresoBruto-gastosVenta;
-  if(pendingSellId){
-    const op=operations.find(o=>o.id===pendingSellId);
-    if(op){
-      const c=calcOp(op);
-      const costPerUnit=c.invertido/op.nominales;
-      const ganancia=ingresoNeto-(costPerUnit*noms);
-      const el=document.getElementById('sp-ganancia');
-      el.textContent=precio>0?fmtUSD(ganancia):'—';
-      el.className='preview-val '+(ganancia>=0?'pos':'neg');
-    }
-  }
-  document.getElementById('sp-bruto').textContent=precio>0?fmtUSD(ingresoBruto):'—';
-  document.getElementById('sp-gastos').textContent=precio>0?fmtUSD(gastosVenta):'—';
-  document.getElementById('sp-neto').textContent=precio>0?fmtUSD(ingresoNeto):'—';
-}
-function confirmSell() {
-  const op=operations.find(o=>o.id===pendingSellId); if(!op) return;
-  const precio=parseFloat(document.getElementById('sell-precio').value);
-  const noms=parseFloat(document.getElementById('sell-nominales').value);
-  const fecha=document.getElementById('sell-fecha').value;
-  const brokerVentaVal=parseFloat(document.getElementById('sell-broker-val').value)||0;
-  if(!precio||precio<=0){showToast('Ingresá un precio de venta válido');return;}
-  if(!noms||noms<=0||noms>op.nominales){showToast('Cantidad de nominales inválida');return;}
-  if(!fecha){showToast('Ingresá la fecha de venta');return;}
-  const c=calcOp(op);
-  const costPerUnit=c.invertido/op.nominales;
-  if(noms<op.nominales){
-    const closedOp={
-      id:uid(),empresa:op.empresa,ticker:op.ticker,tipoActivo:op.tipoActivo,
-      sector:op.sector,bondType:op.bondType,plazo:op.plazo,
-      precioCompra:op.precioCompra,fechaCompra:op.fechaCompra,nominales:noms,
-      brokerVal:op.brokerVal*(noms/op.nominales),precioActual:null,
-      precioVenta:precio,fechaVenta:fecha,brokerVentaVal,estado:'closed',parcial:true,parentId:op.id,
-    };
-    operations.push(closedOp);
-    op.nominales=op.nominales-noms;
-    op.brokerVal=op.brokerVal*(op.nominales/(op.nominales+noms));
-    if(op.brokerVal<0)op.brokerVal=0;
-  } else {
-    op.estado='closed';op.precioVenta=precio;op.fechaVenta=fecha;op.brokerVentaVal=brokerVentaVal;
-  }
-  save(); closeModal('modal-sell'); renderAll(); showToast('Venta registrada ✓');
-}
-
-// ════════════════════════════════════════════════════════
-// DELETE MODAL
-// ════════════════════════════════════════════════════════
-function openDeleteModal(id) {
-  pendingDeleteId=id;
-  const op=operations.find(o=>o.id===id);
-  if(op) document.getElementById('modal-del-info').textContent=`¿Eliminar "${op.empresa} (${op.ticker})"? Esta acción no se puede deshacer.`;
-  document.getElementById('modal-del').classList.add('open');
-}
-function confirmDelete() {
-  operations=operations.filter(o=>o.id!==pendingDeleteId);
-  save(); closeModal('modal-del'); renderAll(); showToast('Operación eliminada');
-}
-
-// ════════════════════════════════════════════════════════
-// EDIT MODAL
-// ════════════════════════════════════════════════════════
-function openEditModal(id) {
-  pendingEditId=id;
-  const op=operations.find(o=>o.id===id); if(!op) return;
-  document.getElementById('edit-empresa').value=op.empresa;
-  document.getElementById('edit-ticker').value=op.ticker;
-  document.getElementById('edit-precio').value=op.precioCompra;
-  document.getElementById('edit-fecha').value=op.fechaCompra;
-  document.getElementById('edit-nominales').value=op.nominales;
-  document.getElementById('edit-tipo-activo').value=op.tipoActivo||'cedear';
-  document.getElementById('edit-sector').value=op.sector||inferSector(op.ticker,op.empresa);
-  document.getElementById('edit-plazo').value=op.plazo||'corto';
-  document.getElementById('edit-bond-type').value=op.bondType||'';
-  document.getElementById('edit-broker-val').value=op.brokerVal||0;
-  toggleEditBondType();
-  document.getElementById('modal-edit').classList.add('open');
-}
-function confirmEdit() {
-  const op=operations.find(o=>o.id===pendingEditId); if(!op) return;
-  op.empresa=document.getElementById('edit-empresa').value.trim()||op.empresa;
-  op.ticker=document.getElementById('edit-ticker').value.trim().toUpperCase()||op.ticker;
-  op.precioCompra=parseFloat(document.getElementById('edit-precio').value)||op.precioCompra;
-  op.fechaCompra=document.getElementById('edit-fecha').value||op.fechaCompra;
-  op.nominales=parseFloat(document.getElementById('edit-nominales').value)||op.nominales;
-  op.tipoActivo=document.getElementById('edit-tipo-activo').value;
-  const hideSectorEdit = op.tipoActivo === 'cripto' || op.tipoActivo === 'bono' || op.tipoActivo === 'on';
-  op.sector = hideSectorEdit ? null : document.getElementById('edit-sector').value;
-  op.plazo=document.getElementById('edit-plazo').value;
-  op.bondType=(op.tipoActivo==='bono'||op.tipoActivo==='on')?(document.getElementById('edit-bond-type').value||''):'';
-  op.brokerVal=parseFloat(document.getElementById('edit-broker-val').value)||0;
-  save(); closeModal('modal-edit'); renderAll(); showToast('Operación actualizada ✓');
-}
-
-// ════════════════════════════════════════════════════════
-// NOTES MODAL
-// ════════════════════════════════════════════════════════
-function openNotesModal(id) {
-  pendingNotesId=id;
-  const op=operations.find(o=>o.id===id); if(!op) return;
-  document.getElementById('notes-modal-title').textContent=`Notas — ${op.empresa}`;
-  document.getElementById('notes-modal-subtitle').textContent=`${op.ticker} · ${op.tipoActivo||'cedear'} · ${op.estado==='open'?'En cartera':'Cerrada'}`;
-  document.getElementById('notes-principal').value=op.notaPrincipal||'';
-  document.getElementById('notes-log-input').value='';
-  renderLogList(op);
-  document.getElementById('modal-notes').classList.add('open');
-}
-
-// ════════════════════════════════════════════════════════
-// NEW OPERATION FORM
-// ════════════════════════════════════════════════════════
-function updatePreview() {
-  const precio=parseFloat(document.getElementById('f-precio').value)||0;
-  const noms=parseFloat(document.getElementById('f-nominales').value)||0;
-  const gastos=parseFloat(document.getElementById('f-broker-val').value)||0;
-  const subtotal=precio*noms;
-  const total=subtotal+gastos;
-  const unit=noms>0?total/noms:0;
-  document.getElementById('prev-subtotal').textContent=precio>0?fmtUSD(subtotal):'—';
-  document.getElementById('prev-gastos').textContent=precio>0?fmtUSD(gastos):'—';
-  document.getElementById('prev-total').textContent=precio>0?fmtUSD(total):'—';
-  document.getElementById('prev-unit').textContent=precio>0&&noms>0?fmtUSD(unit,4):'—';
-}
-function saveOperation() {
-  const empresa=document.getElementById('f-empresa').value.trim();
-  const ticker=document.getElementById('f-ticker').value.trim().toUpperCase();
-  const precio=parseFloat(document.getElementById('f-precio').value);
-  const fecha=document.getElementById('f-fecha').value;
-  const nominales=parseFloat(document.getElementById('f-nominales').value);
-  const brokerVal=parseFloat(document.getElementById('f-broker-val').value)||0;
-  const precioActualRaw=parseFloat(document.getElementById('f-precio-actual').value);
-  let valid=true;
-  const fields=[['f-empresa',!empresa],['f-ticker',!ticker],['f-precio',!precio||precio<=0],['f-fecha',!fecha],['f-nominales',!nominales||nominales<=0]];
-  fields.forEach(([id,err])=>{
-    const el=document.getElementById(id);
-    if(err){el.classList.add('error');valid=false;}else el.classList.remove('error');
-  });
-  if(!valid){showToast('Completá todos los campos obligatorios');return;}
-  const tipoActivo=document.getElementById('f-tipo-activo').value;
-  const plazo=document.getElementById('f-plazo').value;
-  const hideSector = tipoActivo === 'cripto' || tipoActivo === 'bono' || tipoActivo === 'on';
-  const sector = hideSector ? null : document.getElementById('f-sector').value;
-  const bondType=(tipoActivo==='bono'||tipoActivo==='on')?(document.getElementById('f-bond-type').value||''):'';
-  const op={
-    id:uid(),empresa,ticker,tipoActivo,plazo,sector,bondType,
-    precioCompra:precio,fechaCompra:fecha,nominales,brokerVal,
-    precioActual:!isNaN(precioActualRaw)&&precioActualRaw>0?precioActualRaw:null,
-    estado:'open',precioVenta:null,fechaVenta:null,
-  };
-  operations.push(op); save();
-  ['f-empresa','f-ticker','f-precio','f-nominales','f-precio-actual'].forEach(id=>{
-    document.getElementById(id).value='';document.getElementById(id).classList.remove('error');
-  });
-  document.getElementById('f-fecha').value=todayStr();
-  document.getElementById('f-broker-val').value='';
-  updatePreview(); renderAll(); showToast('Operación registrada ✓'); showSection('portfolio');
-}
-
-// ════════════════════════════════════════════════════════
-// MODAL CLOSE HELPER
-// ════════════════════════════════════════════════════════
-function closeModal(id){document.getElementById(id).classList.remove('open');}
-
-
 function renderMetrics() {
   const openOps   = getOpenOps();
   const closedOps = getClosedOps();
@@ -3025,45 +2684,14 @@ function renderMetrics() {
   const gpConDivPct = openInv  > 0 ? (gpConDiv / openInv) * 100 : 0;
   const s = v => v >= 0 ? '+' : '';
 
-  // ── KPI grid: 5 cells ──
   const kpiEl = document.getElementById('metrics-grid');
   kpiEl.className = 'kpi-grid';
   kpiEl.innerHTML = [
-    {
-      label: 'Valor actual',
-      usd: fmtUSD(valorCartera),
-      pct: null,
-      sub: `${openOps.length} posiciones abiertas`,
-      clr: ''
-    },
-    {
-      label: 'G/P no realizada',
-      usd: `${s(gpNoReal)}${fmtUSD(gpNoReal)}`,
-      pct: `${s(gpNoRealPct)}${fmt(gpNoRealPct,2)}%`,
-      sub: `sobre capital abierto`,
-      clr: clr(gpNoReal)
-    },
-    {
-      label: 'G/P realizada',
-      usd: `${s(gpReal)}${fmtUSD(gpReal)}`,
-      pct: `${s(gpRealPct)}${fmt(gpRealPct,2)}%`,
-      sub: `${closedOps.length} operaciones cerradas`,
-      clr: clr(gpReal)
-    },
-    {
-      label: 'Dividendos cobrados',
-      usd: fmtUSD(totalDividendos),
-      pct: null,
-      sub: `${dividendos.length} cobro${dividendos.length !== 1 ? 's' : ''} registrados`,
-      clr: totalDividendos > 0 ? 'pos' : 'neu'
-    },
-    {
-      label: 'Retorno total',
-      usd: `${s(gpConDiv)}${fmtUSD(gpConDiv)}`,
-      pct: `${s(gpConDivPct)}${fmt(gpConDivPct,2)}%`,
-      sub: `sobre capital total desplegado`,
-      clr: clr(gpConDiv)
-    },
+    { label: 'Valor actual', usd: fmtUSD(valorCartera), pct: null, sub: `${openOps.length} posiciones abiertas`, clr: '' },
+    { label: 'G/P no realizada', usd: `${s(gpNoReal)}${fmtUSD(gpNoReal)}`, pct: `${s(gpNoRealPct)}${fmt(gpNoRealPct,2)}%`, sub: `sobre capital abierto`, clr: clr(gpNoReal) },
+    { label: 'G/P realizada', usd: `${s(gpReal)}${fmtUSD(gpReal)}`, pct: `${s(gpRealPct)}${fmt(gpRealPct,2)}%`, sub: `${closedOps.length} operaciones cerradas`, clr: clr(gpReal) },
+    { label: 'Dividendos cobrados', usd: fmtUSD(totalDividendos), pct: null, sub: `${dividendos.length} cobro${dividendos.length !== 1 ? 's' : ''} registrados`, clr: totalDividendos > 0 ? 'pos' : 'neu' },
+    { label: 'Retorno total', usd: `${s(gpConDiv)}${fmtUSD(gpConDiv)}`, pct: `${s(gpConDivPct)}${fmt(gpConDivPct,2)}%`, sub: `sobre capital total desplegado`, clr: clr(gpConDiv) },
   ].map(c => `<div class="kpi-card">
     <div class="kpi-label">${c.label}</div>
     <div class="kpi-main">
@@ -3073,7 +2701,6 @@ function renderMetrics() {
     <div class="kpi-sub">${c.sub}</div>
   </div>`).join('');
 
-  // ── Position scorecards ──
   const posEl = document.getElementById('dash-positions');
   if (!posEl) return;
   if (openOps.length === 0) { posEl.innerHTML = ''; return; }
@@ -3086,9 +2713,7 @@ function renderMetrics() {
       const wt   = openInv > 0 ? (c.invertido / openInv * 100) : 0;
       const noPx = op.precioActual == null;
       const gain = c.gpDolar >= 0;
-      const barColor = gain
-        ? 'background:var(--green)'
-        : 'background:var(--red)';
+      const barColor = gain ? 'background:var(--green)' : 'background:var(--red)';
       return `<div class="pos-card ${gain ? 'gain' : 'loss'}" onclick="showSection('portfolio')">
         <div class="pos-card-header">
           <span class="pos-ticker">${op.ticker}</span>
@@ -3114,9 +2739,6 @@ function renderMetrics() {
     }).join('');
 }
 
-// ════════════════════════════════════════════════════════
-// RENDER PORTFOLIO TABLE
-// ════════════════════════════════════════════════════════
 function renderPortfolio() {
   let ops = [...getOpenOps()];
   if (filterState.portfolio.tipo !== 'all') ops = ops.filter(o => (o.tipoActivo || 'otro') === filterState.portfolio.tipo);
@@ -3170,9 +2792,6 @@ function renderPortfolio() {
   }).join('');
 }
 
-// ════════════════════════════════════════════════════════
-// RENDER CLOSED TABLE
-// ════════════════════════════════════════════════════════
 function renderClosed() {
   let ops = [...getClosedOps()];
   if (filterState.closed.tipo !== 'all') ops = ops.filter(o => (o.tipoActivo || 'otro') === filterState.closed.tipo);
@@ -3276,14 +2895,10 @@ function setFilter(table, dimension, value, btn) {
   else renderClosed();
 }
 
-
 function renderDividendos() {
-  // ── Metrics ──
   const totalDiv = dividendos.reduce((s, d) => s + d.monto, 0);
   const byTicker = {};
-  dividendos.forEach(d => {
-    byTicker[d.ticker] = (byTicker[d.ticker] || 0) + d.monto;
-  });
+  dividendos.forEach(d => { byTicker[d.ticker] = (byTicker[d.ticker] || 0) + d.monto; });
   const topEntry = Object.entries(byTicker).sort((a,b) => b[1]-a[1])[0];
 
   const metricsGrid = document.getElementById('div-metrics-grid');
@@ -3301,7 +2916,6 @@ function renderDividendos() {
       </div>`;
   }
 
-  // ── Table ──
   let rows = [...dividendos];
   const { key, asc } = divSortState;
   if (key) {
@@ -3363,12 +2977,19 @@ function renderCharts() {
     border: { display: false },
   });
 
-  // ── 1. DONUT — % tenencia por posición (valor actual) ──
+  // ── 1. DONUT — % tenencia agrupada por ticker (suma valor actual de todas las compras) ──
   destroyChart('donut');
   if (openOps.length > 0) {
-    const sorted  = [...openOps].sort((a,b) => calcOp(b).valorActual - calcOp(a).valorActual);
-    const labels  = sorted.map(o => o.ticker);
-    const data    = sorted.map(o => parseFloat(fmt(calcOp(o).valorActual,2).replace(',','.')));
+    // Agrupar por ticker: suma el valor actual de todas las posiciones abiertas del mismo activo
+    const grouped = {};
+    openOps.forEach(op => {
+      const t = op.ticker;
+      if (!grouped[t]) grouped[t] = 0;
+      grouped[t] += calcOp(op).valorActual;
+    });
+    const sorted = Object.entries(grouped).sort((a,b) => b[1]-a[1]);
+    const labels  = sorted.map(([t]) => t);
+    const data    = sorted.map(([,v]) => parseFloat(fmt(v,2).replace(',','.')));
     const total   = data.reduce((a,b) => a+b, 0);
     charts.donut  = new Chart(document.getElementById('chart-donut'), {
       type: 'doughnut',
@@ -3461,10 +3082,6 @@ function renderCharts() {
   }
 }
 
-
-// ════════════════════════════════════════════════════════
-// EXPORT / IMPORT CSV
-// ════════════════════════════════════════════════════════
 function exportCSV() {
   const client = clients.find(c => c.id === activeClientId);
   const clientName = client ? `${client.nombre}_${client.apellido}` : 'portfolio';
@@ -3490,7 +3107,6 @@ function importCSV(input) {
         const vals = line.split(',');
         const obj = {};
         headers.forEach((h, i) => { obj[h.trim()] = vals[i]?.trim() ?? ''; });
-        // type coerce
         ['precioCompra','nominales','brokerVal','precioActual','precioVenta','brokerVentaVal'].forEach(k => {
           if (obj[k] !== '') obj[k] = parseFloat(obj[k]) || null;
           else obj[k] = null;
@@ -3511,9 +3127,6 @@ function importCSV(input) {
   reader.readAsText(file);
 }
 
-// ════════════════════════════════════════════════════════
-// NOTES MODAL
-// ════════════════════════════════════════════════════════
 function renderLogList(op) {
   const list = document.getElementById('notes-log-list');
   const log = op.notasLog || [];
@@ -3544,7 +3157,6 @@ function addLogEntry() {
   op.notasLog.push({ fecha, texto: txt });
   document.getElementById('notes-log-input').value = '';
   renderLogList(op);
-  // auto-save silently
   save();
   renderAll();
 }
@@ -3566,9 +3178,6 @@ function saveNotes() {
   showToast('Notas guardadas ✓');
 }
 
-// ════════════════════════════════════════════════════════
-// TOAST
-// ════════════════════════════════════════════════════════
 let toastTimer;
 function showToast(msg) {
   const t = document.getElementById('toast');
@@ -3578,9 +3187,6 @@ function showToast(msg) {
   toastTimer = setTimeout(() => t.classList.remove('show'), 2800);
 }
 
-// ════════════════════════════════════════════════════════
-// RENDER ALL
-// ════════════════════════════════════════════════════════
 function renderAll() {
   renderObjectiveBox();
   renderMetrics();
@@ -3591,9 +3197,6 @@ function renderAll() {
   renderSidebar();
 }
 
-// ════════════════════════════════════════════════════════
-// CLIENT MANAGEMENT
-// ════════════════════════════════════════════════════════
 function renderSidebar() {
   const list = document.getElementById('client-list');
   if (!list) return;
@@ -3705,9 +3308,8 @@ function doDeleteClient() {
 // ════════════════════════════════════════════════════════
 // INIT
 // ════════════════════════════════════════════════════════
-load(); // loads theme only
+load();
 
-// Check existing Supabase session
 (async () => {
   const { data: { session } } = await getSupa().auth.getSession();
   if (session && session.user) {
@@ -3715,17 +3317,15 @@ load(); // loads theme only
     document.getElementById('login-screen').style.display = 'none';
     await loadFromSupabase();
   }
-  // If no session, login screen stays visible
 })();
 
-// Listen for auth changes
 getSupa().auth.onAuthStateChange((event, session) => {
   if (event === 'SIGNED_OUT') {
     document.getElementById('login-screen').style.display = 'flex';
   }
 });
 </script>
-</div><!-- /app-content -->
-</div><!-- /app-shell -->
+</div>
+</div>
 </body>
 </html>
