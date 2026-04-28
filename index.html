@@ -1249,6 +1249,133 @@ input.error, select.error { border-color: var(--red); background: var(--red-bg);
   flex-shrink: 0; font-size: 16px;
   box-shadow: var(--shadow-xs);
 }
+
+/* ══════════════════════════════════════════════════════
+   DASHBOARD REDESIGN
+══════════════════════════════════════════════════════ */
+.dash-main-row {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 14px;
+  align-items: start;
+}
+@media (max-width: 1100px) { .dash-main-row { grid-template-columns: 1fr; } }
+
+/* Dona card */
+.dash-donut-card {
+  position: sticky; top: calc(var(--header-h) + 12px);
+}
+#dash-donut-legend {
+  margin-top: 14px;
+  display: flex; flex-direction: column; gap: 6px;
+}
+.donut-legend-item {
+  display: flex; align-items: center; gap: 9px;
+  padding: 6px 8px;
+  border-radius: var(--radius-xs);
+  transition: background 0.12s;
+  cursor: default;
+}
+.donut-legend-item:hover { background: var(--bg2); }
+.donut-legend-dot {
+  width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0;
+}
+.donut-legend-ticker {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px; font-weight: 600; color: var(--text2);
+  flex: 1; letter-spacing: 0.3px;
+}
+.donut-legend-pct {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px; font-weight: 500; color: var(--text3);
+  min-width: 38px; text-align: right;
+}
+.donut-legend-val {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px; color: var(--text4);
+  min-width: 70px; text-align: right;
+}
+
+/* Positions card */
+.dash-positions-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+.dash-positions-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface2);
+}
+.dash-positions-title {
+  font-size: 13px; font-weight: 700; color: var(--text); letter-spacing: -0.3px;
+}
+.dash-ver-todo {
+  background: none; border: 1px solid var(--border2);
+  border-radius: var(--radius-xs);
+  padding: 4px 11px; font-size: 11.5px; font-weight: 600;
+  color: var(--blue-accent); cursor: pointer;
+  transition: all 0.15s;
+}
+.dash-ver-todo:hover { background: var(--blue-bg); border-color: var(--blue-border); transform: translateX(2px); }
+
+/* Positions table inside dashboard */
+.dash-pos-table { width: 100%; border-collapse: collapse; }
+.dash-pos-table thead th {
+  padding: 9px 14px;
+  text-align: left;
+  font-size: 9px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.9px;
+  color: var(--text4);
+  border-bottom: 1px solid var(--border);
+  background: var(--surface2);
+  white-space: nowrap;
+}
+.dash-pos-table tbody tr {
+  border-bottom: 1px solid var(--border);
+  transition: background 0.1s;
+  cursor: pointer;
+}
+.dash-pos-table tbody tr:last-child { border-bottom: none; }
+.dash-pos-table tbody tr:hover { background: rgba(126,184,247,0.07); }
+.dash-pos-table tbody tr.drow-gain { background: rgba(46,168,122,0.04); }
+.dash-pos-table tbody tr.drow-gain:hover { background: rgba(46,168,122,0.09); }
+.dash-pos-table tbody tr.drow-loss { background: rgba(217,85,85,0.04); }
+.dash-pos-table tbody tr.drow-loss:hover { background: rgba(217,85,85,0.09); }
+.dash-pos-table tbody td { padding: 11px 14px; white-space: nowrap; }
+
+/* Pill for G/P % in dash table */
+.gp-pill {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 3px 9px; border-radius: 99px;
+  font-family: 'DM Mono', monospace;
+  font-size: 11.5px; font-weight: 700;
+}
+.gp-pill.pos { background: var(--green-bg); color: var(--green); border: 1px solid var(--green-border); }
+.gp-pill.neg { background: var(--red-bg); color: var(--red); border: 1px solid var(--red-border); }
+.gp-pill.neu { background: var(--bg2); color: var(--text3); border: 1px solid var(--border); }
+
+/* Weight bar inside table */
+.weight-bar-wrap { display: flex; align-items: center; gap: 7px; }
+.weight-bar-track {
+  width: 60px; height: 4px;
+  background: var(--bg3); border-radius: 99px; overflow: hidden; flex-shrink: 0;
+}
+.weight-bar-fill { height: 100%; border-radius: 99px; background: linear-gradient(90deg, var(--blue-400), var(--blue-600)); }
+.weight-bar-pct {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px; color: var(--text4); white-space: nowrap;
+}
+
+/* Empty dash */
+.dash-empty {
+  padding: 48px 24px; text-align: center; color: var(--text4);
+  font-size: 13px;
+}
+.dash-empty span { display: block; font-size: 28px; margin-bottom: 8px; }
 </style>
 </head>
 <body>
@@ -1431,6 +1558,8 @@ input.error, select.error { border-color: var(--red); background: var(--red-bg);
 
   <!-- ══ DASHBOARD ══ -->
   <section id="sec-dashboard" class="section active">
+
+    <!-- Objetivo -->
     <div class="objective-box" id="objective-box" style="display:none">
       <div class="objective-icon-wrap">🎯</div>
       <div class="objective-body">
@@ -1439,24 +1568,31 @@ input.error, select.error { border-color: var(--red); background: var(--red-bg);
       </div>
       <button class="objective-edit-btn" onclick="openClientModal(activeClientId)">Editar</button>
     </div>
+
+    <!-- KPIs -->
     <div id="metrics-grid"></div>
-    <div id="dash-positions"></div>
-    <div class="chart-row c2" style="margin-top:0">
-      <div class="chart-card">
-        <div class="chart-label">% Tenencia</div>
-        <div class="chart-wrap" style="height:200px"><canvas id="chart-donut"></canvas></div>
+
+    <!-- Main dashboard: dona + tabla de posiciones -->
+    <div class="dash-main-row">
+
+      <!-- Dona -->
+      <div class="chart-card dash-donut-card">
+        <div class="chart-label">Distribución de cartera</div>
+        <div class="chart-wrap" style="height:220px"><canvas id="chart-donut"></canvas></div>
+        <div id="dash-donut-legend"></div>
       </div>
-      <div class="chart-card">
-        <div class="chart-label">Rendimiento % por posición</div>
-        <div class="chart-wrap" style="height:200px"><canvas id="chart-rendimiento"></canvas></div>
+
+      <!-- Tabla de posiciones -->
+      <div class="dash-positions-card">
+        <div class="dash-positions-header">
+          <span class="dash-positions-title">Posiciones abiertas</span>
+          <button class="dash-ver-todo" onclick="showSection('portfolio')">Ver todo →</button>
+        </div>
+        <div id="dash-positions-table"></div>
       </div>
+
     </div>
-    <div class="chart-row c1">
-      <div class="chart-card">
-        <div class="chart-label">Invertido vs Valor actual</div>
-        <div class="chart-wrap" style="height:150px"><canvas id="chart-grouped"></canvas></div>
-      </div>
-    </div>
+
   </section>
 
   <!-- ══ CARTERA ACTIVA ══ -->
@@ -2403,19 +2539,21 @@ function renderMetrics() {
   openOps.forEach(op => { const c = calcOp(op); openInv += c.invertido; valorCartera += c.valorActual; gpNoReal += c.gpDolar; });
   closedOps.forEach(op => { gpReal += calcOp(op).ganancia; });
   const totalDividendos = dividendos.reduce((s,d) => s + d.monto, 0);
-  const gpTotal = gpNoReal + gpReal, gpConDiv = gpTotal + totalDividendos;
+  const gpConDiv = gpNoReal + gpReal + totalDividendos;
   const gpNoRealPct = openInv > 0 ? (gpNoReal / openInv) * 100 : 0;
   const gpRealPct = closedOps.reduce((s,o) => s + calcOp(o).invertido, 0) > 0 ? gpReal / closedOps.reduce((s,o) => s + calcOp(o).invertido, 0) * 100 : 0;
   const gpConDivPct = openInv > 0 ? (gpConDiv / openInv) * 100 : 0;
-  const s = v => v >= 0 ? '+' : '';
+  const sg = v => v >= 0 ? '+' : '';
+
+  // ── KPIs ──
   const kpiEl = document.getElementById('metrics-grid');
   kpiEl.className = 'kpi-grid';
   kpiEl.innerHTML = [
-    { label:'Valor actual', val:fmtUSD(valorCartera), pct:null, caption:`${openOps.length} posiciones abiertas`, clr:'' },
-    { label:'G/P no realizada', val:`${s(gpNoReal)}${fmtUSD(gpNoReal)}`, pct:`${s(gpNoRealPct)}${fmt(gpNoRealPct,2)}%`, caption:'sobre capital abierto', clr:clr(gpNoReal) },
-    { label:'G/P realizada', val:`${s(gpReal)}${fmtUSD(gpReal)}`, pct:`${s(gpRealPct)}${fmt(gpRealPct,2)}%`, caption:`${closedOps.length} operaciones cerradas`, clr:clr(gpReal) },
+    { label:'Valor actual cartera', val:fmtUSD(valorCartera), pct:null, caption:`${openOps.length} posiciones abiertas`, clr:'' },
+    { label:'G/P no realizada', val:`${sg(gpNoReal)}${fmtUSD(gpNoReal)}`, pct:`${sg(gpNoRealPct)}${fmt(gpNoRealPct,2)}%`, caption:'sobre capital invertido', clr:clr(gpNoReal) },
+    { label:'G/P realizada', val:`${sg(gpReal)}${fmtUSD(gpReal)}`, pct:`${sg(gpRealPct)}${fmt(gpRealPct,2)}%`, caption:`${closedOps.length} ops. cerradas`, clr:clr(gpReal) },
     { label:'Dividendos cobrados', val:fmtUSD(totalDividendos), pct:null, caption:`${dividendos.length} cobro${dividendos.length!==1?'s':''}`, clr:totalDividendos>0?'pos':'neu' },
-    { label:'Retorno total', val:`${s(gpConDiv)}${fmtUSD(gpConDiv)}`, pct:`${s(gpConDivPct)}${fmt(gpConDivPct,2)}%`, caption:'capital total desplegado', clr:clr(gpConDiv) },
+    { label:'Retorno total', val:`${sg(gpConDiv)}${fmtUSD(gpConDiv)}`, pct:`${sg(gpConDivPct)}${fmt(gpConDivPct,2)}%`, caption:'G/P + dividendos', clr:clr(gpConDiv) },
   ].map(c => `<div class="kpi-card">
     <div class="kpi-label">${c.label}</div>
     <div class="kpi-value ${c.clr}">${c.val}</div>
@@ -2425,37 +2563,84 @@ function renderMetrics() {
     </div>
   </div>`).join('');
 
-  const posEl = document.getElementById('dash-positions');
-  if (!posEl) return;
-  if (openOps.length === 0) { posEl.innerHTML = ''; return; }
-  posEl.className = 'pos-strip';
-  posEl.innerHTML = [...openOps].sort((a,b) => calcOp(b).invertido - calcOp(a).invertido).map(op => {
-    const c = calcOp(op);
-    const pa = op.precioActual != null ? op.precioActual : op.precioCompra;
-    const wt = openInv > 0 ? (c.invertido / openInv * 100) : 0;
-    const noPx = op.precioActual == null;
-    const gain = c.gpDolar >= 0;
-    return `<div class="pos-card ${gain ? 'gain' : 'loss'}" onclick="showSection('portfolio')">
-      <div class="pos-card-top">
-        <span class="pos-ticker-badge">${op.ticker}</span>
-        <span class="pos-status-dot"></span>
-      </div>
-      <div class="pos-company">${op.empresa}${noPx ? ' <span style="color:var(--amber);font-size:9px;font-weight:700">·NO PRICE</span>' : ''}</div>
-      <div class="pos-price">${fmtUSD(pa)}</div>
-      <div class="pos-entry">entrada ${fmtUSD(op.precioCompra)}</div>
-      <div class="pos-perf-row">
-        <span class="pos-pct">${c.gpPct >= 0 ? '+' : ''}${fmt(c.gpPct,2)}%</span>
-        <span class="pos-usd">${c.gpDolar >= 0 ? '+' : ''}${fmtUSD(c.gpDolar)}</span>
-      </div>
-      <div class="pos-bar-track">
-        <div class="pos-bar-fill" style="width:${Math.min(wt,100)}%"></div>
-      </div>
-      <div class="pos-weight-row">
-        <span>${fmt(wt,1)}% cartera</span>
-        <span>${fmt(op.nominales,0)} nom.</span>
-      </div>
-    </div>`;
-  }).join('');
+  // ── TABLA DE POSICIONES del dashboard ──
+  const tblEl = document.getElementById('dash-positions-table');
+  if (!tblEl) return;
+
+  if (openOps.length === 0) {
+    tblEl.innerHTML = `<div class="dash-empty"><span>📭</span>No hay posiciones abiertas aún.<br>Registrá tu primera operación.</div>`;
+    document.getElementById('dash-donut-legend').innerHTML = '';
+    return;
+  }
+
+  const sorted = [...openOps].sort((a,b) => calcOp(b).invertido - calcOp(a).invertido);
+  const palette = ['#7eb8f7','#a8d8b0','#c5b8f8','#f8c4a0','#80d4c8','#f0a8c8','#b8d870','#d0a8f8','#f8d870','#a8c8f8','#c8e8a8','#f8b8d0'];
+
+  tblEl.innerHTML = `<table class="dash-pos-table">
+    <thead><tr>
+      <th>Empresa</th>
+      <th>Ticker</th>
+      <th>Precio actual</th>
+      <th>Invertido</th>
+      <th>Valor actual</th>
+      <th>G/P</th>
+      <th>% cartera</th>
+      <th>Dividendos</th>
+      <th>Retorno total</th>
+    </tr></thead>
+    <tbody>
+      ${sorted.map((op, i) => {
+        const c = calcOp(op);
+        const pa = op.precioActual != null ? op.precioActual : op.precioCompra;
+        const wt = openInv > 0 ? (c.invertido / openInv * 100) : 0;
+        const divT = totalDivForOp(op.id);
+        const retT = c.gpDolar + divT;
+        const rowCls = c.gpDolar > 0 ? 'drow-gain' : c.gpDolar < 0 ? 'drow-loss' : '';
+        const gpCls = c.gpDolar > 0 ? 'pos' : c.gpDolar < 0 ? 'neg' : 'neu';
+        const color = palette[i % palette.length];
+        const noPx = op.precioActual == null;
+        return `<tr class="${rowCls}" onclick="showSection('portfolio')">
+          <td>
+            <div style="display:flex;align-items:center;gap:8px">
+              <span style="width:8px;height:8px;border-radius:50%;background:${color};flex-shrink:0;display:inline-block"></span>
+              <span style="font-size:12.5px;font-weight:600;color:var(--text)">${op.empresa}</span>
+            </div>
+          </td>
+          <td><span class="ticker-badge">${op.ticker}</span></td>
+          <td class="mono" style="color:var(--text);font-size:12px">${fmtUSD(pa)}${noPx?'<span style="font-size:9px;color:var(--amber);margin-left:4px">●</span>':''}</td>
+          <td class="mono" style="color:var(--text2);font-size:12px">${fmtUSD(c.invertido)}</td>
+          <td class="mono" style="color:var(--text);font-size:12px;font-weight:600">${fmtUSD(c.valorActual)}</td>
+          <td>
+            <span class="gp-pill ${gpCls}">${c.gpPct >= 0 ? '+' : ''}${fmt(c.gpPct,2)}%</span>
+          </td>
+          <td>
+            <div class="weight-bar-wrap">
+              <div class="weight-bar-track"><div class="weight-bar-fill" style="width:${Math.min(wt,100)}%;background:${color}"></div></div>
+              <span class="weight-bar-pct">${fmt(wt,1)}%</span>
+            </div>
+          </td>
+          <td class="mono" style="font-size:12px;color:${divT>0?'var(--green)':'var(--text4)'}">${divT>0?fmtUSD(divT):'—'}</td>
+          <td class="mono" style="font-size:12px;font-weight:600;color:${retT>0?'var(--green)':retT<0?'var(--red)':'var(--text3)'}">${sg(retT)}${fmtUSD(retT)}</td>
+        </tr>`;
+      }).join('')}
+    </tbody>
+  </table>`;
+
+  // ── Leyenda dona ──
+  const legendEl = document.getElementById('dash-donut-legend');
+  if (legendEl) {
+    legendEl.innerHTML = sorted.slice(0,8).map((op, i) => {
+      const c = calcOp(op);
+      const wt = openInv > 0 ? (c.invertido / openInv * 100) : 0;
+      const color = palette[i % palette.length];
+      return `<div class="donut-legend-item">
+        <span class="donut-legend-dot" style="background:${color}"></span>
+        <span class="donut-legend-ticker">${op.ticker}</span>
+        <span class="donut-legend-pct">${fmt(wt,1)}%</span>
+        <span class="donut-legend-val">${fmtUSD(c.valorActual)}</span>
+      </div>`;
+    }).join('') + (sorted.length > 8 ? `<div style="font-size:10.5px;color:var(--text4);padding:4px 8px">+${sorted.length-8} más…</div>` : '');
+  }
 }
 
 function renderPortfolio() {
@@ -2612,65 +2797,63 @@ function getChartColors() {
   };
 }
 function destroyChart(key) { if (charts[key]) { charts[key].destroy(); delete charts[key]; } }
-function rebuildCharts() { ['donut','grouped','rendimiento'].forEach(k => destroyChart(k)); renderCharts(); }
+function rebuildCharts() { destroyChart('donut'); renderCharts(); }
 function renderCharts() {
-  const openOps = getOpenOps(), allOps = [...openOps,...getClosedOps()];
+  const openOps = getOpenOps();
   const isDark = document.body.classList.contains('dark');
   const clrs = getChartColors();
   const surfaceBg = isDark ? '#131c2e' : '#ffffff';
   const font = { family:'Plus Jakarta Sans', size:10.5 };
   const tickColor = clrs.text, gridColor = clrs.grid;
-  const scaleBase = (extra={}) => ({ ticks:{color:tickColor,font,...(extra.ticks||{})}, grid:{color:gridColor,...(extra.grid||{})}, border:{display:false} });
 
   destroyChart('donut');
-  if (openOps.length > 0) {
-    const grouped = {};
-    openOps.forEach(op => { const t = op.ticker; if (!grouped[t]) grouped[t] = 0; grouped[t] += calcOp(op).valorActual; });
-    const sorted = Object.entries(grouped).sort((a,b) => b[1]-a[1]);
-    const labels = sorted.map(([t]) => t);
-    const data = sorted.map(([,v]) => parseFloat(fmt(v,2).replace(',','.')));
-    const total = data.reduce((a,b) => a+b, 0);
-    charts.donut = new Chart(document.getElementById('chart-donut'), {
-      type:'doughnut',
-      data:{ labels, datasets:[{ data, backgroundColor:clrs.palette.slice(0,labels.length), borderWidth:3, borderColor:surfaceBg, hoverOffset:6 }] },
-      options:{ maintainAspectRatio:false, cutout:'68%', animation:{duration:500,easing:'easeOutQuart'}, plugins:{ legend:{position:'right',labels:{color:tickColor,font,boxWidth:8,padding:7,generateLabels:chart=>chart.data.labels.map((lbl,i)=>({text:`${lbl}  ${fmt(data[i]/total*100,1)}%`,fillStyle:clrs.palette[i],strokeStyle:clrs.palette[i],hidden:false,index:i}))}}, tooltip:{backgroundColor:surfaceBg,titleColor:isDark?'#e8f0ff':'#1a2540',bodyColor:tickColor,borderColor:gridColor,borderWidth:1,callbacks:{label:ctx=>` ${ctx.label}: ${fmtUSD(ctx.raw)}  (${fmt(ctx.raw/total*100,1)}%)`}} } }
-    });
-  }
+  const canvas = document.getElementById('chart-donut');
+  if (!canvas) return;
+  if (openOps.length === 0) return;
 
-  destroyChart('rendimiento');
-  if (allOps.length > 0) {
-    const sorted = [...allOps].sort((a,b) => calcOp(a).gpPct - calcOp(b).gpPct);
-    const labels = sorted.map(o => o.ticker + (o.estado==='closed'?' ✓':''));
-    const values = sorted.map(o => parseFloat(fmt(calcOp(o).gpPct,2).replace(',','.')));
-    const green = isDark ? 'rgba(61,196,142,0.75)' : 'rgba(46,168,122,0.65)';
-    const red   = isDark ? 'rgba(240,112,112,0.75)' : 'rgba(217,85,85,0.65)';
-    const nOps = allOps.length;
-    const barThick = nOps<=4?16:nOps<=8?13:nOps<=12?10:8;
-    charts.rendimiento = new Chart(document.getElementById('chart-rendimiento'), {
-      type:'bar',
-      data:{ labels, datasets:[{ data:values, backgroundColor:values.map(v => v>=0?green:red), borderRadius:4, borderSkipped:false, barThickness:barThick }] },
-      options:{ indexAxis:'y', maintainAspectRatio:false, animation:{duration:500,easing:'easeOutQuart'}, plugins:{ legend:{display:false}, tooltip:{backgroundColor:surfaceBg,titleColor:isDark?'#e8f0ff':'#1a2540',bodyColor:tickColor,borderColor:gridColor,borderWidth:1,callbacks:{label:ctx=>{ const op=sorted[ctx.dataIndex],c=calcOp(op),gp=op.estado==='open'?c.gpDolar:c.ganancia; return ` ${ctx.raw>=0?'+':''}${ctx.raw}%  (${gp>=0?'+':''}${fmtUSD(gp)})`; }}} }, scales:{ x:{...scaleBase({ticks:{color:tickColor,font,callback:v=>v+'%'}})}, y:{...scaleBase({grid:{display:false}})} } }
-    });
-  }
+  const grouped = {};
+  openOps.forEach(op => {
+    const t = op.ticker;
+    if (!grouped[t]) grouped[t] = 0;
+    grouped[t] += calcOp(op).valorActual;
+  });
+  const sorted = Object.entries(grouped).sort((a,b) => b[1]-a[1]);
+  const labels = sorted.map(([t]) => t);
+  const data = sorted.map(([,v]) => parseFloat(fmt(v,2).replace(/\./g,'').replace(',','.')));
+  const palette = ['#7eb8f7','#a8d8b0','#c5b8f8','#f8c4a0','#80d4c8','#f0a8c8','#b8d870','#d0a8f8','#f8d870','#a8c8f8','#c8e8a8','#f8b8d0'];
+  const total = data.reduce((a,b) => a+b, 0);
 
-  destroyChart('grouped');
-  if (openOps.length > 0) {
-    const sorted = [...openOps].sort((a,b) => calcOp(b).invertido - calcOp(a).invertido);
-    const labels = sorted.map(o => o.ticker);
-    const invertidos = sorted.map(o => calcOp(o).invertido);
-    const actuales = sorted.map(o => calcOp(o).valorActual);
-    const actColors = sorted.map(o => {
-      const c = calcOp(o);
-      return c.valorActual >= c.invertido
-        ? (isDark?'rgba(61,196,142,0.7)':'rgba(46,168,122,0.6)')
-        : (isDark?'rgba(240,112,112,0.7)':'rgba(217,85,85,0.6)');
-    });
-    charts.grouped = new Chart(document.getElementById('chart-grouped'), {
-      type:'bar',
-      data:{ labels, datasets:[ { label:'Invertido', data:invertidos, backgroundColor:isDark?'rgba(126,184,247,0.35)':'rgba(126,184,247,0.45)', borderRadius:4 }, { label:'Valor actual', data:actuales, backgroundColor:actColors, borderRadius:4 } ] },
-      options:{ maintainAspectRatio:false, animation:{duration:500,easing:'easeOutQuart'}, plugins:{ legend:{labels:{color:tickColor,font,boxWidth:8,padding:7}}, tooltip:{backgroundColor:surfaceBg,titleColor:isDark?'#e8f0ff':'#1a2540',bodyColor:tickColor,borderColor:gridColor,borderWidth:1,callbacks:{label:ctx=>` ${ctx.dataset.label}: ${fmtUSD(ctx.raw)}`}} }, scales:{ x:scaleBase({}), y:{...scaleBase({ticks:{color:tickColor,font,callback:v=>'$'+fmt(v,0)}})} } }
-    });
-  }
+  charts.donut = new Chart(canvas, {
+    type: 'doughnut',
+    data: {
+      labels,
+      datasets: [{
+        data,
+        backgroundColor: palette.slice(0, labels.length),
+        borderWidth: 3,
+        borderColor: surfaceBg,
+        hoverOffset: 8,
+      }]
+    },
+    options: {
+      maintainAspectRatio: false,
+      cutout: '70%',
+      animation: { duration: 600, easing: 'easeOutQuart' },
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          backgroundColor: surfaceBg,
+          titleColor: isDark ? '#e8f0ff' : '#1a2540',
+          bodyColor: tickColor,
+          borderColor: gridColor,
+          borderWidth: 1,
+          callbacks: {
+            label: ctx => ` ${ctx.label}: ${fmtUSD(ctx.raw)}  (${fmt(ctx.raw/total*100,1)}%)`
+          }
+        }
+      }
+    }
+  });
 }
 
 function exportCSV() {
